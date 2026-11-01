@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Διαδραστικές ερωτήσεις Σωστού – Λάθους στα Μαθηματικά Προσανατολισμού της Γ΄ Λυκείου, με αιτιολόγηση και παραπομπές στο σχολικό βιβλίο.">
+  <title>Σωστό ή Λάθος | Μαθηματικά Γ΄ Λυκείου</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="questions-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#question-section">Μετάβαση στην ερώτηση</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-icon" aria-hidden="true">Σ/Λ</div>
+      <div class="brand-text">
+        <span class="brand-eyebrow">Μαθηματικά Προσανατολισμού</span>
+        <strong>Γ΄ Λυκείου</strong>
+      </div>
+      <span class="year-pill">2026–2027</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-text">
+        <div class="mini-tag"><span class="mini-dot" aria-hidden="true"></span> Τράπεζα ερωτήσεων</div>
+        <h1 id="page-title">Σωστό <span>ή</span> Λάθος<span class="title-period">.</span></h1>
+        <p>Επίλεξε απάντηση, έλεγξε την αιτιολόγηση και εξασκήσου στις έννοιες του σχολικού βιβλίου.</p>
+      </div>
+      <div class="intro-stat" aria-live="polite">
+        <span>Διαθέσιμες ερωτήσεις</span>
+        <strong id="total-count">9</strong>
+        <small>Με αιτιολογημένες απαντήσεις</small>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Επιλογές εξάσκησης">
+      <div class="filters-row">
+        <div class="field-group chapter-field">
+          <label for="chapter-select">Κεφάλαιο</label>
+          <select id="chapter-select"><option value="all">Όλα τα κεφάλαια</option></select>
+        </div>
+        <div class="field-group section-field">
+          <label for="section-select">Παράγραφος</label>
+          <select id="section-select"><option value="all">Όλες οι παράγραφοι</option></select>
+        </div>
+        <div class="field-group search-field">
+          <label for="search-input">Αναζήτηση</label>
+          <input id="search-input" type="search" placeholder="Λέξη ή τύπος…" autocomplete="off">
+        </div>
+      </div>
+      <div class="mode-bar">
+        <div class="tabs" role="tablist" aria-label="Τρόπος εξάσκησης">
+          <button id="mode-study" class="tab active" type="button" role="tab" aria-selected="true">Μελέτη <span class="tab-desc">Άμεση εξήγηση</span></button>
+          <button id="mode-quiz" class="tab" type="button" role="tab" aria-selected="false">Αυτοαξιολόγηση <span class="tab-desc">Αποτέλεσμα στο τέλος</span></button>
+        </div>
+        <div class="mode-options">
+          <div class="field-group compact" id="quiz-count-wrap" hidden>
+            <label for="quiz-count">Ερωτήσεις</label>
+            <select id="quiz-count">
+              <option value="5">5</option><option value="10" disabled>10</option><option value="20" disabled>20</option><option value="all" selected>Όλες</option>
+            </select>
+          </div>
+          <button class="secondary-btn" type="button" id="restart-btn" title="Νέα σειρά ερωτήσεων">↻ Νέα προσπάθεια</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="question-section" class="question-shell" aria-label="Ερωτήσεις">
+      <div id="question-panel" class="question-panel">
+        <div class="question-toolbar">
+          <span class="topic-tag" id="current-section">1.2 Συναρτήσεις</span>
+          <span class="question-index" id="question-index">Ερώτηση 1 από 9</span>
+        </div>
+        <div class="progress-track" role="progressbar" id="progressbar" aria-label="Πρόοδος" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="question-body">
+          <p class="question-asking">Χαρακτήρισε την ακόλουθη πρόταση</p>
+          <h2 id="statement">Φόρτωση ερωτήσεων…</h2>
+          <div class="answer-grid" aria-label="Επιλογή απάντησης">
+            <button class="answer-btn" type="button" data-answer="Σ"><span class="answer-mark">Σ</span><span>Σωστό</span><span class="choice-circle" aria-hidden="true"></span></button>
+            <button class="answer-btn" type="button" data-answer="Λ"><span class="answer-mark">Λ</span><span>Λάθος</span><span class="choice-circle" aria-hidden="true"></span></button>
+          </div>
+          <div id="feedback" class="feedback" role="status" aria-live="polite" hidden>
+            <div class="feedback-heading"><span id="feedback-symbol" class="feedback-symbol" aria-hidden="true">✓</span><strong id="feedback-title"></strong></div>
+            <p id="feedback-body"></p>
+            <div class="source-line"><span>Τεκμηρίωση</span> <span id="source-label"></span> <a id="source-link" href="#" target="_blank" rel="noopener noreferrer">Σχολικό βιβλίο ↗</a></div>
+          </div>
+        </div>
+        <div class="question-footer">
+          <div class="question-origin" id="question-origin"> </div>
+          <button type="button" class="primary-btn" id="next-btn" disabled>Επόμενη ερώτηση <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div id="result-panel" class="result-panel" hidden>
+        <div class="result-mark" aria-hidden="true">✓</div>
+        <p class="result-label">Ολοκλήρωση προσπάθειας</p>
+        <h2 id="result-title"></h2>
+        <div class="result-number" id="result-score"></div>
+        <p id="result-description"></p>
+        <div id="mistake-review" class="mistake-review"></div>
+        <button type="button" id="retry-btn" class="primary-btn">Νέα προσπάθεια ↻</button>
+      </div>
+      <div id="empty-panel" class="empty-panel" hidden>
+        <h2>Δεν βρέθηκαν ερωτήσεις.</h2>
+        <p>Δοκίμασε διαφορετική επιλογή κεφαλαίου ή αφαίρεσε τη λέξη αναζήτησης.</p>
+      </div>
+    </section>
+
+    <section class="notes-strip" aria-label="Πληροφορίες">
+      <div><span class="notes-icon" aria-hidden="true">✓</span><span><strong>Κάθε απάντηση αιτιολογείται.</strong> Στη Μελέτη βλέπεις την εξήγηση αμέσως. Στην Αυτοαξιολόγηση, στο τέλος.</span></div>
+      <div><span class="notes-icon" aria-hidden="true">◎</span><span><strong>Χωρίς εγγραφή.</strong> Δεν αποστέλλονται ονόματα ή απαντήσεις σε διακομιστή.</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Μαθηματικά Γ΄ Λυκείου</strong>
+        <p>Εκπαιδευτικό υλικό αυτοαξιολόγησης · Πιλοτική έκδοση 1.2</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_2.html" target="_blank" rel="noopener noreferrer">Σχολικό βιβλίο</a>
+        <a href="https://www.iep.edu.gr/yli-kai-odigies-didaskalias-genikou-lykeiou-gia-to-scholiko-etos-2026-2027/" target="_blank" rel="noopener noreferrer">Οδηγίες ΙΕΠ</a>
+        <button id="teacher-open" type="button" class="footer-button">Διαχείριση ερωτήσεων</button>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="teacher-dialog" class="teacher-dialog" aria-labelledby="teacher-title">
+    <div class="dialog-head"><h2 id="teacher-title">Διαχείριση ερωτήσεων</h2><button class="icon-button" id="teacher-close" aria-label="Κλείσιμο" type="button">×</button></div>
+    <p>Οι ερωτήσεις διατηρούνται στο συνοδευτικό Excel. Για να προσθέσεις ερωτήσεις από επόμενο φυλλάδιο, ενημέρωσε το Excel και αποθήκευσε το φύλλο «Ερωτήσεις» ως <code>questions.csv</code> (CSV UTF-8). Προσθέτουμε μόνο ερωτήσεις που υπάρχουν στα φυλλάδιά μας.</p>
+    <label class="upload-area" for="csv-file"><strong>Δοκιμή νέου αρχείου CSV</strong><span>Επίλεξε το αποθηκευμένο CSV για να ελέγξεις τις ερωτήσεις τοπικά.</span><input type="file" id="csv-file" accept=".csv,text/csv"></label>
+    <div class="import-status" id="import-status" role="status" aria-live="polite"></div>
+    <button id="download-csv" type="button" class="secondary-btn">Λήψη τρέχοντος CSV</button>
+    <div class="dialog-help"><strong>Δημοσίευση</strong><p>Για να εμφανιστούν οι νέες ερωτήσεις σε όλους τους μαθητές, στο GitHub άνοιξε το αποθετήριο της εφαρμογής και ανέβασε τη νέα έκδοση του <code>questions.csv</code> στην ίδια θέση. Ο σύνδεσμος της εφαρμογής παραμένει ίδιος. Η εισαγωγή από αυτό το παράθυρο είναι μόνο τοπική δοκιμή, χωρίς δημοσίευση.</p></div>
+    <p class="dialog-small">Οι εγγραφές με κατάσταση «Πρόχειρη» δεν δημοσιεύονται. Οι κωδικοί των ερωτήσεων πρέπει να είναι μοναδικοί.</p>
+  </dialog>
+</body>
+</html>
