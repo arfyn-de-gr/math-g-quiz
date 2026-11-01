@@ -147,9 +147,6 @@
     }
     results.scrollIntoView({block:'start',behavior:'smooth'});
   }
-  function csvEscape(s){const t=String(s??'');return '"'+t.replace(/"/g,'""')+'"';}
-  function makeCSV(rows){return '\uFEFF'+FIELDS.map(csvEscape).join(';')+'\r\n'+rows.map(q=>FIELDS.map(k=>csvEscape(q[k])).join(';')).join('\r\n')+'\r\n';}
-  function download(data,filename,type){const blob=new Blob([data],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);}
   function events(){
     answerButtons.forEach(b=>b.addEventListener('click',()=>answer(b.dataset.answer)));
     $('next-btn').addEventListener('click',next);
@@ -160,15 +157,6 @@
     $('topic-select').addEventListener('change',start);
     $('search-input').addEventListener('input',start);
     $('quiz-count').addEventListener('change',start);
-    $('teacher-open').addEventListener('click',()=>$('teacher-dialog').showModal());
-    $('teacher-close').addEventListener('click',()=>$('teacher-dialog').close());
-    $('teacher-dialog').addEventListener('click',e=>{if(e.target===$('teacher-dialog'))$('teacher-dialog').close();});
-    $('csv-file').addEventListener('change',async e=>{
-      const file=e.target.files?.[0];if(!file)return;
-      try{const rows=validate(parseCSV(await file.text()));setQuestions(rows);$('import-status').className='import-status';$('import-status').textContent=`Φορτώθηκαν ${rows.length} ερωτήσεις για τοπική δοκιμή. Οι αλλαγές δεν έχουν δημοσιευθεί.`;}
-      catch(err){$('import-status').className='import-status error';$('import-status').textContent='Σφάλμα. '+err.message;}
-    });
-    $('download-csv').addEventListener('click',()=>download(makeCSV(state.all),'questions.csv','text/csv;charset=utf-8'));
   }
   function setMode(mode){state.mode=mode;studyTab.classList.toggle('active',mode==='study');quizTab.classList.toggle('active',mode==='quiz');studyTab.setAttribute('aria-selected',String(mode==='study'));quizTab.setAttribute('aria-selected',String(mode==='quiz'));$('quiz-count-wrap').hidden=mode!=='quiz';start();}
   async function init(){
