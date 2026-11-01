@@ -92,3 +92,9 @@ body {font-size:var(--body-size);line-height:1.55}
 @media(max-width:1050px){.filters-row{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.filters-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.chapter-field{min-width:0}}
 @media(max-width:480px){.filters-row{grid-template-columns:1fr}}
+
+/* Στοιχειοθεσία ορίων και εκθετών στην έκδοση 1.5 */
+.math-limit{display:inline-flex;vertical-align:-.35em;flex-direction:column;align-items:center;line-height:1.1;white-space:nowrap;margin:0 .05em}
+.math-limit>span{font-style:normal;font-family:Cambria,Georgia,serif;line-height:1.12}
+.math-limit>sub{font-family:Cambria,Georgia,serif;font-size:.62em;line-height:1.05;position:static;vertical-align:baseline}
+sup{font-size:.7em;vertical-align:super;line-height:0}

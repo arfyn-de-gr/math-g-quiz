@@ -6,6 +6,27 @@
   const studyTab=$('mode-study'),quizTab=$('mode-quiz'),panel=$('question-panel'),results=$('result-panel'),empty=$('empty-panel');
   const answerButtons=[...document.querySelectorAll('[data-answer]')];
   const normalized=s=>String(s??'').trim();
+  // Τυπογραφική απεικόνιση ορίων και εκθετών, μόνο με ασφαλείς κόμβους κειμένου.
+  function setMathText(element, input){
+    const text=String(input??'');
+    const pattern=/lim_\(([^()]*)\)|\^(\([^)]*\)|[\p{L}\p{N}]+)/gu;
+    const nodes=[];let last=0,match;
+    while((match=pattern.exec(text))!==null){
+      if(match.index>last)nodes.push(document.createTextNode(text.slice(last,match.index)));
+      if(match[1]!==undefined){
+        const box=document.createElement('span');box.className='math-limit';
+        const base=document.createElement('span');base.textContent='lim';
+        const sub=document.createElement('sub');sub.textContent=match[1];
+        box.append(base,sub);nodes.push(box);
+      }else{
+        const sup=document.createElement('sup');const raw=match[2];
+        sup.textContent=raw.startsWith('(')?raw.slice(1,-1):raw;nodes.push(sup);
+      }
+      last=pattern.lastIndex;
+    }
+    if(last<text.length)nodes.push(document.createTextNode(text.slice(last)));
+    element.replaceChildren(...nodes);
+  }
   const shuffle=arr=>{const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 
   function detectDelimiter(raw){
@@ -77,7 +98,7 @@
   function render(){
     if(state.finished)return;
     const q=state.deck[state.cursor],answer=state.answers[q.id],hasAnswer=answer!==undefined;
-    $('statement').textContent=q.statement;
+    setMathText($('statement'),q.statement);
     $('current-section').textContent=q.section;
     $('question-index').textContent=`Ερώτηση ${state.cursor+1} από ${state.deck.length}`;
     // Η προέλευση παραμένει στα δεδομένα για τον εκπαιδευτικό, όχι στην οθόνη μαθητή.
@@ -95,7 +116,7 @@
       const good=answer===q.answer;const feedback=$('feedback');feedback.hidden=false;feedback.className='feedback '+(good?'good':'bad');
       $('feedback-symbol').textContent=good?'✓':'×';
       $('feedback-title').textContent=good?'Σωστή απάντηση':`Η σωστή απάντηση είναι «${q.answer==='Σ'?'Σωστό':'Λάθος'}»`;
-      $('feedback-body').textContent=q.explanation;
+      setMathText($('feedback-body'),q.explanation);
       $('source-label').textContent=publicCitation(q);
       const link=$('source-link');link.hidden=!safeUrl(q.source_url);if(!link.hidden)link.href=q.source_url;
     }else $('feedback').hidden=true;
@@ -133,11 +154,11 @@
       const title=document.createElement('h3');title.className='review-title';title.textContent=state.mode==='quiz'?'Αιτιολογήσεις για όλες τις ερωτήσεις':'Ερωτήσεις που χρειάζονται επανάληψη';review.append(title);
       items.forEach((q,i)=>{
         const card=document.createElement('article');card.className='review-card';
-        const h=document.createElement('h3');h.textContent=(i+1)+'. '+q.statement;
+        const h=document.createElement('h3');setMathText(h,(i+1)+'. '+q.statement);
         const correctText=document.createElement('p');correctText.className='review-answer';
         const userAnswer=state.answers[q.id];
         correctText.textContent=`Απάντησή σου: ${userAnswer?(userAnswer==='Σ'?'Σωστό':'Λάθος'):'Δεν απαντήθηκε'}. Σωστός χαρακτηρισμός: ${q.answer==='Σ'?'Σωστό':'Λάθος'}.`;
-        const explan=document.createElement('p');explan.textContent=q.explanation;
+        const explan=document.createElement('p');setMathText(explan,q.explanation);
         card.append(h,correctText,explan);
         if(safeUrl(q.source_url)){const a=document.createElement('a');a.href=q.source_url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=publicCitation(q);card.append(a);}
         review.append(card);
