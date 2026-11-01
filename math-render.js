@@ -22,6 +22,7 @@ window.QuizMath = (() => {
     '∉':'\\notin','∩':'\\cap','∪':'\\cup','∅':'\\emptyset',
     '⋅':'\\cdot','±':'\\pm','∓':'\\mp','∖':'\\setminus',
     '−':'-',
+    'ℓ':'\\ell',
   };
   const sub={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9'};
   const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+'};
@@ -99,6 +100,7 @@ window.QuizMath = (() => {
         const m=t.slice(j).match(/^[\p{L}\p{N}₀-₉]+/u);
         if(m){out+='\\sqrt'+(index?'['+index+']':'')+'{'+convert(m[0])+'}';i=j+m[0].length;continue;}
       }
+      if((t[i]==='ℕ'||t[i]==='ℝ'||t[i]==='ℤ') && t[i+1]==='*'){out+=greek[t[i]]+'^{*}';i+=2;continue;}
       if(t[i]==='^') {
         let j=i+1,body='';
         if(t[j]==='('){const end=balanced(t,j);if(end>j){body=t.slice(j+1,end-1);j=end;}}
@@ -112,22 +114,55 @@ window.QuizMath = (() => {
     }
     return out;
   }
+  // Read a complete mathematical equality, including its right-hand side.
+  // Previously only lim + its immediate operand were rendered, leaving =+∞
+  // and similar expressions as plain text with incompatible typography.
+  function readLimit(text,start){
+    const m=/^lim_\(([^()]*)\)/u.exec(text.slice(start));
+    if(!m)return null;
+    const argEnd=start+m[0].length;
+    const opEnd=operandEnd(text,argEnd);
+    const operand=text.slice(argEnd,opEnd).trim();
+    return {end:opEnd,tex:'\\lim\\limits_{'+convert(m[1])+'}'+(operand?'\\,'+convert(operand):'')};
+  }
+  function readChain(text,start){
+    const first=readLimit(text,start);
+    if(!first)return null;
+    let {end,tex}=first;
+    for(let tries=0;tries<12;tries++){
+      const space=/^\s*/u.exec(text.slice(end))[0];
+      const at=end+space.length;
+      const rel=/^(?:⇔|⇒|=|≠|≤|≥|<|>)/u.exec(text.slice(at));
+      if(!rel)break;
+      const after=at+rel[0].length;
+      const spaces=/^\s*/u.exec(text.slice(after))[0];
+      const rightAt=after+spaces.length;
+      // The next argument may itself be a second limit.
+      const next=readLimit(text,rightAt);
+      const newEnd=next?next.end:operandEnd(text,rightAt);
+      if(newEnd<=rightAt)break;
+      const rhs=next?next.tex:convert(text.slice(rightAt,newEnd));
+      tex+='\\,'+convert(rel[0])+'\\,'+rhs;
+      end=newEnd;
+    }
+    return {start,end,tex};
+  }
   function findFragments(text){
     const fragments=[];
-    const pattern=/lim_\(([^()]*)\)/g;
+    const pattern=/lim_\(([^()]*)\)/gu;
     let match;
     while((match=pattern.exec(text))){
-      const start=match.index, until=operandEnd(text,pattern.lastIndex), operand=text.slice(pattern.lastIndex,until).trim();
-      const tex='\\lim\\limits_{'+convert(match[1])+'}'+(operand?'\\,'+convert(operand):'');
-      fragments.push({start,end:until||pattern.lastIndex,tex});
-      pattern.lastIndex=Math.max(until,pattern.lastIndex);
+      const frag=readChain(text,match.index);
+      if(!frag)continue;
+      fragments.push(frag);
+      pattern.lastIndex=Math.max(frag.end,pattern.lastIndex);
     }
     return fragments;
   }
   function appendMixedText(text,nodes) {
     // Compact powers, roots and graph symbols outside limits. This is strictly
     // presentation logic; it never changes the stored statement or answer.
-    const pattern=/√(?:\[[^\]]+\])?\([^()]*\)|\bC_\([^()]*\)|\bC_[fg]\b|[A-Za-zα-ω](?:\([^()]*\))?\^\([^()]*\)|[A-Za-zα-ω](?:\([^()]*\))?\^[\p{L}\p{N}]+|\b\d+\/[A-Za-zα-ω](?:\([^()]*\))?/gu;
+    const pattern=/[\p{L}₀-₉]+(?:\([^()]*\))?\s*[∈∉]\s*[ℝℕℤ]\*?|√(?:\[[^\]]+\])?\([^()]*\)|\bC_\([^()]*\)|\bC_[fg]\b|[A-Za-zα-ω](?:\([^()]*\))?\^\([^()]*\)|[A-Za-zα-ω](?:\([^()]*\))?\^[\p{L}\p{N}]+|\b\d+\/[A-Za-zα-ω](?:\([^()]*\))?/gu;
     let pos=0,match;
     while((match=pattern.exec(text))!==null){
       if(match.index>pos)nodes.push(document.createTextNode(text.slice(pos,match.index)));

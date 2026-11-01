@@ -1,4 +1,4 @@
-/* Εφεδρικό αντίγραφο τράπεζας 181 ερωτήσεων από τα Φυλλάδια 1–19. */
+/* Εφεδρική τράπεζα, 181 εγγραφές (1 προσωρινά ανενεργή). */
 window.QUIZ_FALLBACK = [
   {
     "id": "F1-001",
@@ -892,7 +892,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Από τον ορισμό της γνησίως αύξουσας συνάρτησης, x₁<x₂ συνεπάγεται f(x₁)<f(x₂) για κάθε τέτοιο ζεύγος.",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 1",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -905,7 +905,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Σε γνησίως φθίνουσα συνάρτηση, μεγαλύτερη τιμή του ορίσματος αντιστοιχεί σε μικρότερη τιμή της συνάρτησης. Συνεπώς, αν x₁>x₂, ισχύει f(x₁)<f(x₂).",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 2",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -918,7 +918,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η σταθερή συνάρτηση f(x)=1 στο ℝ δεν είναι ούτε γνησίως αύξουσα ούτε γνησίως φθίνουσα σε διάστημα με δύο διαφορετικά σημεία.",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 3",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -931,7 +931,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η μία συνεπαγωγή είναι ο ορισμός της γνησίως αύξουσας. Η άλλη ισχύει επειδή αν x₁≥x₂, η ισότητα ή η γνήσια αύξηση οδηγεί σε f(x₁)≥f(x₂).",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 4",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -944,7 +944,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Σε γνησίως φθίνουσα συνάρτηση η διάταξη των τιμών αντιστρέφει τη διάταξη των ορισμάτων.",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 5",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -957,7 +957,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η συνάρτηση f(x)=x² στο διάστημα [−1,1] δεν είναι ούτε γνησίως αύξουσα ούτε γνησίως φθίνουσα.",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 6",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -970,7 +970,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η γνήσια μονοτονία σε διάστημα σημαίνει ότι η συνάρτηση είναι γνησίως αύξουσα ή γνησίως φθίνουσα. Αφού αποκλείεται η δεύτερη δυνατότητα, ισχύει η πρώτη.",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 7",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -983,7 +983,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Κάθε γνησίως μονότονη συνάρτηση είναι 1–1 στο διάστημα μονοτονίας της. Δύο διαφορετικά ορίσματα με ίδιες τιμές αποκλείουν τη γνήσια μονοτονία.",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 8",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -996,7 +996,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η αύξηση σε δύο χωριστά διαστήματα δεν επιβάλλει σύγκριση μεταξύ σημείων που ανήκουν σε διαφορετικά διαστήματα. Για f(x)=x+10 όταν x<0 και f(x)=x όταν x>0, ισχύει f(−1)=9>1=f(1).",
     "source": "Φυλλάδιο 7, σελ. 5 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 7 (2026–2027), ερώτηση 9",
     "status": "Ενεργή",
     "topic": "Μονοτονία συνάρτησης"
@@ -1009,7 +1009,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Αυτή είναι ακριβώς η συνθήκη ολικού μεγίστου στο x₀.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 1",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1022,7 +1022,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Το ολικό μέγιστο M είναι τιμή της συνάρτησης και όλες οι τιμές ικανοποιούν f(x)≤M. Δεν μπορεί να υπάρχει f(x₀)>M.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 2",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1035,7 +1035,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η συνθήκη f(x)≥f(x₀) για κάθε x του πεδίου ορισμού είναι ο ορισμός του ολικού ελαχίστου.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 3",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1048,7 +1048,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Το ίδιο ελάχιστο μπορεί να εμφανίζεται σε περισσότερες θέσεις. Για f(x)=0 στο ℝ, ολόκληρη η γραφική παράσταση βρίσκεται στην ευθεία y=0.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 4",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1061,7 +1061,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Ο μ είναι κάτω φράγμα των τιμών της f, αλλά μπορεί να μην είναι τιμή της. Για f(x)=x²+1 στο ℝ ισχύει f(x)≥0, ενώ το ελάχιστο είναι 1.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 5",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1074,7 +1074,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Στις σταθερές συναρτήσεις το ολικό μέγιστο και το ολικό ελάχιστο συμπίπτουν.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 6",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1087,7 +1087,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η f(x)=x στο ℝ δεν παρουσιάζει ούτε ολικό μέγιστο ούτε ολικό ελάχιστο.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 7",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1100,7 +1100,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η σταθερή συνάρτηση f(x)=2 στο ℝ έχει ολικό μέγιστο και ελάχιστο το 2 σε κάθε πραγματικό αριθμό.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 8",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1113,7 +1113,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Κάθε σταθερή συνάρτηση έχει ίσο ολικό μέγιστο και ολικό ελάχιστο.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 9",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1126,7 +1126,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Οι αριθμοί κ και λ ανήκουν στο σύνολο τιμών, ενώ κάθε τιμή της f βρίσκεται ανάμεσά τους.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 10",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1139,7 +1139,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Το λ είναι άνω φράγμα, αλλά δεν ανήκει στο σύνολο τιμών. Για κάθε τιμή μικρότερη του λ υπάρχει μεγαλύτερη τιμή μέσα στο διάστημα.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 11",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1152,7 +1152,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Κανένα άκρο του ανοικτού διαστήματος δεν ανήκει στο σύνολο τιμών και κάθε τιμή του διαστήματος έχει άλλη μεγαλύτερη και μικρότερη.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 12",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1165,7 +1165,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Αν η f είναι γνησίως αύξουσα, τα ακρότατα είναι f(α),f(β). Αν είναι γνησίως φθίνουσα, η σειρά αντιστρέφεται. Δεν απαιτείται συνέχεια.",
     "source": "Φυλλάδιο 8, σελ. 3 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 8 (2026–2027), ερώτηση 13",
     "status": "Ενεργή",
     "topic": "Ακρότατα συνάρτησης"
@@ -1178,7 +1178,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η απουσία δύο διαφορετικών ορισμάτων με ίδια εικόνα αποτελεί ισοδύναμη μορφή του ορισμού της 1–1 συνάρτησης.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 1",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1191,7 +1191,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η ισότητα των εικόνων επιβάλλει ισότητα των ορισμάτων ακριβώς όταν η f είναι 1–1.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 2",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1204,7 +1204,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Για κάθε α του συνόλου τιμών υπάρχει τουλάχιστον μία λύση. Η ιδιότητα 1–1 εξασφαλίζει ότι η λύση είναι μοναδική.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 3",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1217,7 +1217,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Μια 1–1 συνάρτηση τέμνεται από κάθε οριζόντια ευθεία το πολύ μία φορά, ενδεχομένως καμία. Για f(x)=eˣ, η ευθεία y=−1 δεν έχει κοινό σημείο.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 4",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1230,7 +1230,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Αν υπήρχαν δύο διαφορετικά κοινά σημεία στην ίδια οριζόντια ευθεία, δύο διαφορετικά ορίσματα θα είχαν ίσες εικόνες.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 5",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1243,7 +1243,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η συνάρτηση f:ℝ→ℝ με f(0)=1, f(1)=0 και f(x)=x για κάθε άλλο x είναι 1–1, επειδή ανταλλάσσει τις εικόνες των 0 και 1 στην ταυτοτική. Δεν είναι γνησίως μονότονη, αφού 0<1 αλλά f(0)>f(1), ενώ −1<0 και f(−1)<f(0).",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 6",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1256,7 +1256,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Κάθε γνησίως αύξουσα ή γνησίως φθίνουσα συνάρτηση είναι υποχρεωτικά 1–1.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 7",
     "status": "Ενεργή",
     "topic": "Συνάρτηση 1–1"
@@ -1269,9 +1269,9 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Χωρίς υπόθεση ότι το συμμετρικό πεδίο ορισμού περιέχει μη μηδενικό αριθμό, η πρόταση δεν ισχύει. Για παράδειγμα, η f:{0}→ℝ με f(0)=0 είναι άρτια και 1–1. Σε συμμετρικό πεδίο που περιέχει x≠0, η αρτιότητα επιβάλλει f(x)=f(−x), άρα δεν μπορεί να είναι 1–1.",
     "source": "Φυλλάδιο 9, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 9 (2026–2027), ερώτηση 8",
-    "status": "Ενεργή",
+    "status": "Ανενεργή",
     "topic": "Συνάρτηση 1–1"
   },
   {
@@ -1282,7 +1282,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Για κάθε y στο σύνολο τιμών της f, η εξίσωση f(x)=y έχει μία μοναδική λύση. Έτσι ορίζεται η αντίστροφη f⁻¹ με πεδίο ορισμού το f(A).",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 1",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1295,7 +1295,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Από τον ορισμό της αντίστροφης, D_(f⁻¹)=f(A).",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 2",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1308,7 +1308,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Η αντίστροφη αντιστοιχίζει κάθε τιμή της f στο αρχικό της όρισμα. Το σύνολο τιμών της f⁻¹ είναι το A.",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 3",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1321,7 +1321,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η f⁻¹ είναι η αντίστροφη ως προς τη σύνθεση, ενώ 1/f είναι η αντίστροφη ως προς τον πολλαπλασιασμό των τιμών. Για f(x)=eˣ έχουμε f⁻¹(x)=ln x (x>0) και 1/f(x)=e⁻ˣ (x∈ℝ).",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 4",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1334,7 +1334,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Για x∈A και y∈f(A), ο ορισμός της αντίστροφης δίνει ακριβώς αυτή την ισοδυναμία.",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 5",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1347,7 +1347,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Οι συνθέσεις αντιστοιχίζουν το στοιχείο στην αρχική του τιμή, στα αντίστοιχα πεδία ορισμού.",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 6",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1360,7 +1360,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Λ",
     "explanation": "Η f⁻¹∘f είναι η ταυτοτική στο A, ενώ η f∘f⁻¹ είναι η ταυτοτική στο f(A). Αν A≠f(A), έχουν διαφορετικά πεδία ορισμού. Για f(x)=eˣ, είναι αντιστοίχως η ταυτοτική στο ℝ και στο (0,+∞).",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 7",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1373,7 +1373,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Το σημείο (α,β) ανήκει στη γραφική παράσταση της f ακριβώς όταν το (β,α) ανήκει στη γραφική παράσταση της αντίστροφης.",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 8",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1386,7 +1386,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Αν f(α)=α, τότε από την ιδιότητα της αντίστροφης προκύπτει f⁻¹(α)=α. Το σημείο (α,α) ανήκει και στις δύο γραφικές παραστάσεις.",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 9",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1399,7 +1399,7 @@ window.QUIZ_FALLBACK = [
     "answer": "Σ",
     "explanation": "Από τη σχέση f(α)=β προκύπτει f⁻¹(β)=α, οπότε το M′ ανήκει στη C_(f⁻¹).",
     "source": "Φυλλάδιο 10, σελ. 4 · Σχολικό βιβλίο, §1.3",
-    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_3.html",
+    "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika_Teuxos-B_G-Lykeiou-ThSp_html-apli/indexB1_3.html",
     "origin": "Φυλλάδιο 10 (2026–2027), ερώτηση 10",
     "status": "Ενεργή",
     "topic": "Αντίστροφη συνάρτηση"
@@ -1656,9 +1656,9 @@ window.QUIZ_FALLBACK = [
     "chapter": "1. Όριο – Συνέχεια συνάρτησης",
     "section": "1.5 Ιδιότητες των ορίων",
     "statement": "Για όλες τις συναρτήσεις f,g με πεδίο ορισμού ℝ, οι οποίες έχουν όριο σε κάθε σημείο x₀, υπάρχει το lim_(x→x₀)(f∘g)(x).",
-    "answer": "Σ",
-    "explanation": "Αφού η f έχει πεπερασμένο όριο σε κάθε πραγματικό σημείο και ορίζεται σε όλο το ℝ, είναι συνεχής σε κάθε σημείο. Το ίδιο ισχύει για την g. Η σύνθεση συνεχών συναρτήσεων είναι συνεχής, επομένως το ζητούμενο όριο υπάρχει.",
-    "source": "Φυλλάδιο 13, σελ. 2 · Σχολικό βιβλίο, §1.5",
+    "answer": "Λ",
+    "explanation": "Η ύπαρξη του ορίου μιας συνάρτησης σε κάθε σημείο δεν συνεπάγεται ότι η τιμή της στο σημείο ισούται με το όριο. Ενδεικτικά, θέτουμε f(t)=1 αν t=0 και f(t)=0 αν t≠0. Η f έχει όριο σε κάθε πραγματικό σημείο. Θέτουμε g(x)=x·ημ(1/x) για x≠0 και g(0)=0. Η g έχει όριο σε κάθε πραγματικό σημείο, αφού στο 0 το όριό της είναι 0 από το κριτήριο παρεμβολής. Όμως, καθώς x→0, η σύνθεση f(g(x)) παίρνει την τιμή 1 σε άπειρα σημεία όπου ημ(1/x)=0 και την τιμή 0 σε άλλα σημεία που πλησιάζουν το 0. Άρα το όριο της f∘g στο 0 δεν υπάρχει. Στον κανόνα ορίου σύνθετης συνάρτησης της §1.5 απαιτούνται πρόσθετες προϋποθέσεις.",
+    "source": "Φυλλάδιο 13, σελ. 2 · Σχολικό βιβλίο, §§1.4–1.5",
     "source_url": "https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_5.html",
     "origin": "Φυλλάδιο 13 (2026–2027), ερώτηση 1",
     "status": "Ενεργή",
