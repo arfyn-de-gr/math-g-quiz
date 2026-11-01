@@ -98,3 +98,10 @@ body {font-size:var(--body-size);line-height:1.55}
 .math-limit>span{font-style:normal;font-family:Cambria,Georgia,serif;line-height:1.12}
 .math-limit>sub{font-family:Cambria,Georgia,serif;font-size:.62em;line-height:1.05;position:static;vertical-align:baseline}
 sup{font-size:.7em;vertical-align:super;line-height:0}
+
+/* Μαθηματική στοιχειοθεσία 1.6: κάθε όριο και η παράστασή του μένουν ενωμένα. */
+.math-atom{display:inline-block;white-space:nowrap;max-width:none;vertical-align:middle;line-height:1.15;margin:0 .08em}
+.math-atom mjx-container{display:inline-block!important;vertical-align:middle!important;margin:0!important;max-width:none!important}
+#statement,#feedback-body,.review-card h3,.review-card p{overflow-wrap:break-word;word-break:normal}
+#statement .math-atom,.review-card .math-atom{font-size:.90em}
+@media(max-width:480px){#statement .math-atom{font-size:.82em}}

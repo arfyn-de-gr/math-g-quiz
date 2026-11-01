@@ -6,27 +6,8 @@
   const studyTab=$('mode-study'),quizTab=$('mode-quiz'),panel=$('question-panel'),results=$('result-panel'),empty=$('empty-panel');
   const answerButtons=[...document.querySelectorAll('[data-answer]')];
   const normalized=s=>String(s??'').trim();
-  // Τυπογραφική απεικόνιση ορίων και εκθετών, μόνο με ασφαλείς κόμβους κειμένου.
-  function setMathText(element, input){
-    const text=String(input??'');
-    const pattern=/lim_\(([^()]*)\)|\^(\([^)]*\)|[\p{L}\p{N}]+)/gu;
-    const nodes=[];let last=0,match;
-    while((match=pattern.exec(text))!==null){
-      if(match.index>last)nodes.push(document.createTextNode(text.slice(last,match.index)));
-      if(match[1]!==undefined){
-        const box=document.createElement('span');box.className='math-limit';
-        const base=document.createElement('span');base.textContent='lim';
-        const sub=document.createElement('sub');sub.textContent=match[1];
-        box.append(base,sub);nodes.push(box);
-      }else{
-        const sup=document.createElement('sup');const raw=match[2];
-        sup.textContent=raw.startsWith('(')?raw.slice(1,-1):raw;nodes.push(sup);
-      }
-      last=pattern.lastIndex;
-    }
-    if(last<text.length)nodes.push(document.createTextNode(text.slice(last)));
-    element.replaceChildren(...nodes);
-  }
+  // Ο τύπος αποδίδεται από τη βιβλιοθήκη MathJax ως αδιαίρετη μαθηματική έκφραση.
+  const setMathText=(element,input)=>window.QuizMath.set(element,input);
   const shuffle=arr=>{const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 
   function detectDelimiter(raw){
