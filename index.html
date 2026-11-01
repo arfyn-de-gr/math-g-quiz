@@ -6,9 +6,9 @@
   <meta name="color-scheme" content="light">
   <meta name="description" content="Διαδραστικές ερωτήσεις Σωστού – Λάθους στα Μαθηματικά Προσανατολισμού της Γ΄ Λυκείου, με αιτιολόγηση και παραπομπές στο σχολικό βιβλίο.">
   <title>Σωστό ή Λάθος | Μαθηματικά Γ΄ Λυκείου</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="questions-data.js"></script>
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=1.3">
+  <script defer src="questions-data.js?v=1.3"></script>
+  <script defer src="app.js?v=1.3"></script>
 </head>
 <body>
   <a class="skip-link" href="#question-section">Μετάβαση στην ερώτηση</a>
@@ -32,7 +32,7 @@
       </div>
       <div class="intro-stat" aria-live="polite">
         <span>Διαθέσιμες ερωτήσεις</span>
-        <strong id="total-count">9</strong>
+        <strong id="total-count">37</strong>
         <small>Με αιτιολογημένες απαντήσεις</small>
       </div>
     </section>
@@ -46,6 +46,10 @@
         <div class="field-group section-field">
           <label for="section-select">Παράγραφος</label>
           <select id="section-select"><option value="all">Όλες οι παράγραφοι</option></select>
+        </div>
+        <div class="field-group topic-field">
+          <label for="topic-select">Θεματική κατηγορία</label>
+          <select id="topic-select"><option value="all">Όλες οι κατηγορίες</option></select>
         </div>
         <div class="field-group search-field">
           <label for="search-input">Αναζήτηση</label>
@@ -90,7 +94,6 @@
           </div>
         </div>
         <div class="question-footer">
-          <div class="question-origin" id="question-origin"> </div>
           <button type="button" class="primary-btn" id="next-btn" disabled>Επόμενη ερώτηση <span aria-hidden="true">→</span></button>
         </div>
       </div>
@@ -105,7 +108,7 @@
       </div>
       <div id="empty-panel" class="empty-panel" hidden>
         <h2>Δεν βρέθηκαν ερωτήσεις.</h2>
-        <p>Δοκίμασε διαφορετική επιλογή κεφαλαίου ή αφαίρεσε τη λέξη αναζήτησης.</p>
+        <p>Δοκίμασε διαφορετική επιλογή κεφαλαίου, παραγράφου ή κατηγορίας ή αφαίρεσε τη λέξη αναζήτησης.</p>
       </div>
     </section>
 
@@ -119,7 +122,7 @@
     <div class="container footer-inner">
       <div>
         <strong>Μαθηματικά Γ΄ Λυκείου</strong>
-        <p>Εκπαιδευτικό υλικό αυτοαξιολόγησης · Πιλοτική έκδοση 1.2</p>
+        <p>Εκπαιδευτικό υλικό αυτοαξιολόγησης · Έκδοση 1.3</p>
       </div>
       <div class="footer-links">
         <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2732/Mathimatika-G-Lykeiou-ThSp_html-apli/indexB1_2.html" target="_blank" rel="noopener noreferrer">Σχολικό βιβλίο</a>

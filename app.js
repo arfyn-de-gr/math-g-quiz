@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const FIELDS=['id','chapter','section','statement','answer','explanation','source','source_url','origin','status'];
+  const FIELDS=['id','chapter','section','statement','answer','explanation','source','source_url','origin','status','topic'];
   const $=id=>document.getElementById(id);
   const state={all:[],pool:[],deck:[],cursor:0,answers:{},mode:'study',finished:false};
   const studyTab=$('mode-study'),quizTab=$('mode-quiz'),panel=$('question-panel'),results=$('result-panel'),empty=$('empty-panel');
@@ -46,6 +46,7 @@
     makeOptions($('chapter-select'),chapters,'Όλα τα κεφάλαια');
     if(chapters.includes(initial))$('chapter-select').value=initial;
     refreshSections();
+    refreshTopics();
   }
   function makeOptions(select,values,allLabel){select.replaceChildren(new Option(allLabel,'all'),...values.map(v=>new Option(v,v)));}
   function refreshSections(){
@@ -54,9 +55,15 @@
     makeOptions($('section-select'),secs,'Όλες οι παράγραφοι');
     if(secs.includes(current))$('section-select').value=current;
   }
+  function refreshTopics(){
+    const chapter=$('chapter-select').value,section=$('section-select').value,current=$('topic-select').value;
+    const topics=[...new Set(state.all.filter(q=>published(q)&&(chapter==='all'||q.chapter===chapter)&&(section==='all'||q.section===section)).map(q=>q.topic||q.section))].sort((a,b)=>a.localeCompare(b,'el'));
+    makeOptions($('topic-select'),topics,'Όλες οι κατηγορίες');
+    if(topics.includes(current))$('topic-select').value=current;
+  }
   function getPool(){
-    const chapter=$('chapter-select').value,section=$('section-select').value,term=$('search-input').value.toLocaleLowerCase('el').trim();
-    return state.all.filter(q=>published(q)&&(chapter==='all'||q.chapter===chapter)&&(section==='all'||q.section===section)&&(!term||(q.statement+' '+q.explanation+' '+q.id).toLocaleLowerCase('el').includes(term)));
+    const chapter=$('chapter-select').value,section=$('section-select').value,topic=$('topic-select').value,term=$('search-input').value.toLocaleLowerCase('el').trim();
+    return state.all.filter(q=>published(q)&&(chapter==='all'||q.chapter===chapter)&&(section==='all'||q.section===section)&&(topic==='all'||(q.topic||q.section)===topic)&&(!term||(q.statement+' '+q.explanation+' '+q.id).toLocaleLowerCase('el').includes(term)));
   }
   function start(){
     state.pool=getPool();state.answers={};state.cursor=0;state.finished=false;
@@ -73,7 +80,7 @@
     $('statement').textContent=q.statement;
     $('current-section').textContent=q.section;
     $('question-index').textContent=`Ερώτηση ${state.cursor+1} από ${state.deck.length}`;
-    $('question-origin').textContent=q.origin||'';
+    // Η προέλευση παραμένει στα δεδομένα για τον εκπαιδευτικό, όχι στην οθόνη μαθητή.
     const completed=Object.keys(state.answers).length;
     const percent=Math.round(100*completed/state.deck.length);
     $('progress-fill').style.width=percent+'%';$('progressbar').setAttribute('aria-valuenow',percent);
@@ -89,12 +96,17 @@
       $('feedback-symbol').textContent=good?'✓':'×';
       $('feedback-title').textContent=good?'Σωστή απάντηση':`Η σωστή απάντηση είναι «${q.answer==='Σ'?'Σωστό':'Λάθος'}»`;
       $('feedback-body').textContent=q.explanation;
-      $('source-label').textContent=q.source||'Σχολικό βιβλίο';
+      $('source-label').textContent=publicCitation(q);
       const link=$('source-link');link.hidden=!safeUrl(q.source_url);if(!link.hidden)link.href=q.source_url;
     }else $('feedback').hidden=true;
     $('next-btn').disabled=state.mode==='study'&&!hasAnswer;
     $('next-btn').innerHTML=state.cursor===state.deck.length-1?'Ολοκλήρωση <span aria-hidden="true">✓</span>':'Επόμενη ερώτηση <span aria-hidden="true">→</span>';
     if(state.mode==='quiz')$('next-btn').disabled=false;
+  }
+  function publicCitation(q){
+    // Αφαίρεση της εσωτερικής σήμανσης φυλλαδίου, χωρίς τροποποίηση της πηγής.
+    const label=normalized(q.source).replace(/^Φυλλάδιο\s+\d+[^·]*·\s*/iu,'');
+    return label || 'Σχολικό βιβλίο';
   }
   function safeUrl(url){try{return ['https:','http:'].includes(new URL(url).protocol)}catch{return false}}
   function answer(value){
@@ -127,7 +139,7 @@
         correctText.textContent=`Απάντησή σου: ${userAnswer?(userAnswer==='Σ'?'Σωστό':'Λάθος'):'Δεν απαντήθηκε'}. Σωστός χαρακτηρισμός: ${q.answer==='Σ'?'Σωστό':'Λάθος'}.`;
         const explan=document.createElement('p');explan.textContent=q.explanation;
         card.append(h,correctText,explan);
-        if(safeUrl(q.source_url)){const a=document.createElement('a');a.href=q.source_url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=q.source||'Σχολικό βιβλίο';card.append(a);}
+        if(safeUrl(q.source_url)){const a=document.createElement('a');a.href=q.source_url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=publicCitation(q);card.append(a);}
         review.append(card);
       });
     }
@@ -141,8 +153,9 @@
     $('next-btn').addEventListener('click',next);
     $('restart-btn').addEventListener('click',start);$('retry-btn').addEventListener('click',()=>{start();$('question-section').scrollIntoView({block:'start'});});
     studyTab.addEventListener('click',()=>setMode('study'));quizTab.addEventListener('click',()=>setMode('quiz'));
-    $('chapter-select').addEventListener('change',()=>{refreshSections();start()});
-    $('section-select').addEventListener('change',start);
+    $('chapter-select').addEventListener('change',()=>{refreshSections();refreshTopics();start()});
+    $('section-select').addEventListener('change',()=>{refreshTopics();start()});
+    $('topic-select').addEventListener('change',start);
     $('search-input').addEventListener('input',start);
     $('quiz-count').addEventListener('change',start);
     $('teacher-open').addEventListener('click',()=>$('teacher-dialog').showModal());
